@@ -26,7 +26,7 @@ class Investment_account(object):
             gain = sum(np.random.uniform(0, 1, size=position) > 0.49)   # number of random variable which is greater than 0.49
             cumu_ret.append(position_value * gain * 2)
 
-        daily_ret = [(ret/1000)-1 for ret in cumu_ret] # calculate the daily return
+        daily_ret = [(ret/self.purchase_value)-1 for ret in cumu_ret] # calculate the daily return
         
         return daily_ret
 
