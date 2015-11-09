@@ -34,7 +34,7 @@ try:
 
 
             print 'Saved results file and histogram plots under current dictory'
-            results.to_csv('result.txt', sep=',')
+            results.to_csv('results.txt', sep=',')
         elif x == 'No':
             sys.exit()
         break
