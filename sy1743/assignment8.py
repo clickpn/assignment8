@@ -35,9 +35,14 @@ try:
 
             print 'Saved results file and histogram plots under current dictory'
             results.to_csv('results.txt', sep=',')
+            break
         elif x == 'No':
             sys.exit()
-        break
+            break
+        
+        else:
+            print "Please enter Yes or No!"
+
         
 except KeyboardInterrupt, ValueError:
     print "\n Interrupted!"

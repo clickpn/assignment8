@@ -16,7 +16,10 @@ class Investment_account(object):
     """
 
     def __init__(self, purchase_value):
-        self.purchase_value = purchase_value
+        if purchase_value >= 0:
+            self.purchase_value = purchase_value
+        else:
+            raise ValueError('Value must be greater than 0!')
 
 
     def invest_sim(self, position, num_trials):
